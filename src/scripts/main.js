@@ -47,7 +47,13 @@ function createTree(element, data) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  createTree(food);
+  const container = document.createElement('div');
+
+  container.id = 'tree';
+  document.body.appendChild(container);
+
+  // ✅ Один правильний виклик
+  createTree(container, food);
 });
 
 createTree(tree, food);
